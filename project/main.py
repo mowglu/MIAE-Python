@@ -1,4 +1,4 @@
-from api import fetcher, utils
+from api import fetcher
 from data import a_v_data, aggregate
 
 
