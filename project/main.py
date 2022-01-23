@@ -5,9 +5,10 @@ from data import a_v_data, aggregate
 def main_wrapper():
     print(
         f"This is the start of our python project, we will be starting off with this wrapper main function called {main_wrapper.__name__}")
-    fetcher.states_accessor()
-    flight_list = aggregate.fix_dataset()
-    a_v_data.analyze(dataset=flight_list)
+    # fetcher.states_accessor()
+    fetcher.tracks_accessor()
+    # flight_list = aggregate.fix_dataset()
+    # a_v_data.analyze(dataset=flight_list)
     print("This is the end of our python project")
 
 
