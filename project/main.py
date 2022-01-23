@@ -3,10 +3,11 @@ import pandas as pd
 from api import fetcher
 
 def my_func():
-    # flightlist = pd.concat(
-    #     pd.read_csv(file, parse_dates=["firstseen", "lastseen", "day"])
-    #     for file in Path("path/to/folder").glob("flightlist_*.csv.gz")
-    # )
+    flightlist = pd.concat(
+        pd.read_csv(file, parse_dates=["firstseen", "lastseen", "day"])
+        # for file in Path("path/to/folder").glob("flightlist_*.csv.gz")
+        for file in Path("C:/Users/mowgl/Documents/Python/MIAE_Python_Tutorial/MIAE-Python/data_set").glob("flightlist_*.csv.gz")
+    )
     pass
 
 
