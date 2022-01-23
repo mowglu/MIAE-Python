@@ -7,7 +7,6 @@ def main_wrapper():
     print(
         f"This is the start of our python project, we will be starting off with this wrapper main function called {main_wrapper.__name__}")
 
-    # CHANGED THIS!
 
     # API fetcher examples
     fetcher.states_accessor()
