@@ -1,2 +1,1 @@
-This is just dumb.
-I'm changing stuff as a test.
+Add more dummy texts, see that it doesn't prompt git adds!
