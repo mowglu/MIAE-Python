@@ -13,7 +13,8 @@ def fixed_dataset() -> pd.DataFrame:
     )
     return flight_list
 
-def forming():
+def forming_dataset():
     flights_json = fetcher.flights_accessor()
     # Forget about latitude_1 till altitude_2
-    print('sample')
+
+    #OUTPUT TO BE A CSV!

@@ -1,4 +1,4 @@
-from api import fetcher
+from api import fetcher, utils
 from data import a_v_data, aggregate
 
 
@@ -7,13 +7,12 @@ def main_wrapper():
     print(
         f"This is the start of our python project, we will be starting off with this wrapper main function called {main_wrapper.__name__}")
 
-
     # API fetcher examples
     fetcher.states_accessor()
     # fetcher.tracks_accessor()
 
     # EXAMPLE1: Forming dataset
-    aggregate.forming()
+    aggregate.forming_dataset()
     # EXAMPLE2: Fixed dataset
     flight_list = aggregate.fixed_dataset()
     a_v_data.analyze(dataset=flight_list)
