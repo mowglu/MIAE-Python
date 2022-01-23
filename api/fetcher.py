@@ -15,14 +15,19 @@ def states_accessor():
 
 
 def tracks_accessor():
-    # url = f"{ROOT_URL}/flights/all?begin=1641080731&end=1641084931"
-    # r = requests.get(url)
-    # if not r.ok:
-    #     raise RuntimeError(r.json())
-    # print(r.json())
+    # From reading documentation, running this through is implied first!
+    # flights_accessor()
     url = f"{ROOT_URL}/tracks/all?icao24=80141c&time=1641080730"
     r = requests.get(url)
     if not r.ok:
         raise RuntimeError(r.json())
     print(r.json())
     # BUT this is de-activated :(
+
+
+def flights_accessor():
+    url = f"{ROOT_URL}/flights/all?begin=1641080731&end=1641084931"
+    r = requests.get(url)
+    if not r.ok:
+        raise RuntimeError(r.json())
+    return r.json()
