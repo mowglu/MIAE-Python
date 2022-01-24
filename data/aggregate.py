@@ -15,6 +15,10 @@ def fixed_dataset() -> pd.DataFrame:
 
 def forming_dataset():
     flights_json = fetcher.flights_accessor()
+    column_headers = flights_json[0].keys()
+    df = pd.DataFrame(data=flights_json)
+    df.drop(labels=['arrivalAirportCandidatesCount','estArrivalAirportVertDistance', 'estArrivalAirportHorizDistance', 'estDepartureAirportHorizDistance', 'estDepartureAirportVertDistance', 'estArrivalAirport'], axis=1, inplace=True)
+    print('test')
     # Forget about latitude_1 till altitude_2
 
     #OUTPUT TO BE A CSV!

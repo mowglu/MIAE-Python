@@ -9,13 +9,15 @@ def main_wrapper():
 
     # API fetcher examples
     fetcher.states_accessor()
-    # fetcher.tracks_accessor()
+    fetcher.tracks_accessor()
+
+    print('hi')
 
     # EXAMPLE1: Forming dataset
-    aggregate.forming_dataset()
-    # EXAMPLE2: Fixed dataset
-    flight_list = aggregate.fixed_dataset()
-    a_v_data.analyze(dataset=flight_list)
+    # aggregate.forming_dataset()
+    # # EXAMPLE2: Fixed dataset
+    # flight_list = aggregate.fixed_dataset()
+    # a_v_data.analyze(dataset=flight_list)
 
     print("This is the end of our python project")
 
