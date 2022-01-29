@@ -1,4 +1,5 @@
 from api import fetcher
+from data import aggregate
 
 
 # Let's start in main.py showing some wrapper patterns and depicting method attributes.
@@ -23,8 +24,10 @@ def main_wrapper():
 
     #4. Finish API fetcher. Also add some data folders in gitignore. Like data_to_ignore (with sample example) Also utils example
 
-    #5.
+    #5. Need to introduce fixed dataset (link). Adding data_ignore to env
+    flight_list_fixed = aggregate.fixed_dataset()
 
+    #6.
     print("This is the end of our python project")
 
 
