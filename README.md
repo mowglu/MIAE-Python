@@ -19,7 +19,7 @@ The basic flow of the tutorial is as follows:
 
    2.vii. Perform data analysis and data visualization. Put back into PyCharm.
 
-   2.viii. Finish with some basic excel exports! Voila, a completed project already hosted and ready to be viewed by employers.
+   2.viii. Voila, a completed project already hosted and ready to be viewed by employers.
 
 ## Contact Me
 My email is siddharth.raghavan@mail.mcgill.ca
