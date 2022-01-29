@@ -1,19 +1,9 @@
 import altair as alt
 import pandas as pd
+import altair_viewer
 
 
-def analyze(*, dataset: pd.DataFrame):
-    airports_subset = [
-        # Europe
-        ["LFPG", "EGLL", "EHAM", "EDDF", "LEMD", "LIRF", "LSZH", "UUEE"],
-        # Eastern Asia
-        ["VHHH", "RJBB", "RJTT", "RKSI", "RCTP", "RPLL"],
-        # Asia (other)
-        ["YSSY", "YMML", "OMDB", "VABB", "VIDP", "WSSS"],
-        # Americas
-        ["CYYZ", "KSFO", "KLAX", "KATL", "KJFK", "SBGR"],
-    ]
-
+def analyze(*, dataset: pd.DataFrame, airports_subset: list):
     data = pd.concat(
         (
             dataset.query(f'origin == "{airport}"')
@@ -27,15 +17,14 @@ def analyze(*, dataset: pd.DataFrame):
         ),
         axis=1,
     )
+    return data
 
-    print(data)
 
+def visualize(data, airports_subset: list):
     chart = alt.Chart(
         data.reset_index()
             # prepare data for altair
             .melt("day", var_name="airport", value_name="count")
-            # include the name of the city associated with the airport code
-            .rename(columns=dict(municipality="city"))
     )
 
     def full_chart(source, subset, subset_name):
@@ -56,8 +45,6 @@ def analyze(*, dataset: pd.DataFrame):
                 x="day",
                 y=alt.Y("count", title="# of departing flights"),
                 color=alt.Color("airport", legend=alt.Legend(title=subset_name)),
-                # add some legend next to  point
-                tooltip=["day", "airport", "city", "count"],
                 # not too noisy please
                 opacity=alt.value(0.5),
             )
@@ -95,6 +82,6 @@ def analyze(*, dataset: pd.DataFrame):
         ]
     ).resolve_scale(color="independent")
 
-
-def visualize():
-    pass
+    # Need to add something to visualize the figure explicitly (unlike Google Collab where it's easily viewable)
+    altair_viewer.show(result)
+    # This is not the world's best viewer, see if you can find alternatives!
