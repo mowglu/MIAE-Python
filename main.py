@@ -7,6 +7,8 @@ def main_wrapper():
         f"This is the start of our python project, we will be starting off with this wrapper main function called {main_wrapper.__name__}")
 
     # Stuff here - wrapper!
+    # project structuring for modularity, maintainability, and separation of concerns.
+    # 2. git pull
 
     print("This is the end of our python project")
 
