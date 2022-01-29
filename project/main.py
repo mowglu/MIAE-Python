@@ -37,7 +37,9 @@ def main_wrapper():
     # EXAMPLE2: Fixed dataset
     flight_list_fixed = aggregate.fixed_dataset()
 
-    #7.
+    #7. Make sure the time period is more than 2 year. Export csv look at data!
+
+    #8.
     print("This is the end of our python project")
 
 
