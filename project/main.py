@@ -21,7 +21,9 @@ def main_wrapper():
     fetcher.states_accessor()
     # fetcher.tracks_accessor()
 
-    #4.
+    #4. Finish API fetcher. Also add some data folders in gitignore. Like data_to_ignore (with sample example) Also utils example
+
+    #5.
 
     print("This is the end of our python project")
 

@@ -23,3 +23,10 @@ def tracks_accessor():
         raise RuntimeError(r.json())
     # print(r.json())
     # BUT this is de-activated :(
+
+def flights_accessor():
+    url = f"{ROOT_URL}/flights/all?begin=1641142800&end=1641148800"
+    r = requests.get(url)
+    if not r.ok:
+        raise RuntimeError(r.json())
+    return r.json()
