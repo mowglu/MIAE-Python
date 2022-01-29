@@ -54,7 +54,10 @@ def main_wrapper():
     # Analyzer, visualizer
     cleaned_data = a_v_data.analyze(dataset=flight_list_fixed, airports_subset=AIRPORTS_BY_REGION)
 
-    #9.
+    #9. Visualizer is a_v_data script.
+    a_v_data.visualize(data=cleaned_data, airports_subset=AIRPORTS_BY_REGION)
+
+    #10.
     print("This is the end of our python project")
 
 
