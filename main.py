@@ -1,5 +1,6 @@
 # Let's start in main.py showing some wrapper patterns and depicting method attributes.
 # Explore with pushes and pulls and view on GitHub!
+# git remote add new_origin https://github.com/mowglu/MIAE-Python and then use git pull new_origin <<commit>>
 def main_wrapper():
     # intrinsic methods
     print(
